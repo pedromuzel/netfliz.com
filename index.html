@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>My Video Library & Message for Liz</title>
+
+</head>
+<body>
+    <header>
+        <h1>LIZ PATRICI</h1>
+    </header>
+
+    <main>
+        <!-- Área de Vídeos -->
+        <h2>OUR MOVIE</h2>
+        <div id="movie-list">
+            <div class="movie">
+                <video width="200" height="300" controls>
+                    <source src="./dama.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p class="movie-title">A DAMA E O VAGABUNDO</p>
+            </div>
+        </div>
+
+        <!-- Área de Áudio -->
+        <section id="audio-list">
+            <h2>AUDIO AREA</h2>
+            <h3>As musicas do video em acustico gravadas e reproduzidas pela minha pessoa</h3>
+            <ul>
+                <li>
+                    <audio controls>
+                        <source src="./outravida.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    <p>Áudio 1</p>
+                </li>
+                <li>
+                    <audio controls>
+                        <source src="./outravida.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    <p>Áudio 2</p>
+                </li>
+                <li>
+                    <audio controls>
+                        <source src="./outravida.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    <p>Áudio 3</p>
+                </li>
+            </ul>
+        </section>
+
+      
+
+        <!-- Área de Livros em PDF -->
+        <section id="pdf-list">
+            <h2>SEUS LIVROS FAVORITOS S2</h2>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1_UG28udQx8qhBMjNO5j1W22aE5kUIkEN/view?pli=1" target="_blank">VERITY</a></li>
+                <li><a href="https://static.tumblr.com/yijpogv/S0Pogwluk/o_lado_feio_do_amor_-_colleen_hoover.pdf" target="_blank">LADO FEIO DO AMOR</a></li>
+                <li><a href="https://mega.nz/folder/su9EESgK#F1ZX4DlkQuyeymZV7-3e1Q/folder/J6tTSTgC" target="_blank">É ASSIM QUE ACABA</a></li>
+                <li><a href="https://www.penguinlivros.pt/wp-content/uploads/2022/10/9-de-Novembro.pdf?srsltid=AfmBOorNGShnDJSMqYQocirvEkI2QgukNmidAKN02A47Dn4nvNDyKDnU" target="_blank">NOVEMBRO,9</a></li>
+                <li><a href="https://mega.nz/folder/ZmFAFIyQ#BUm5idTnt9FxGzDuNYcbTA/folder/53shiIJD" target="_blank">CONFESSE</a></li>
+            </ul>
+        </section>
+
+        <br>
+        <!-- Mensagem para Liz -->
+        <section id="message-to-liz">
+            <h1>PLAYLIST AREA</h1>
+            <iframe src="https://open.spotify.com/embed/playlist/1dvhDCLcLQf31R1D1591Kg?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <h1>Casa comigo?</h1>
+            <button id="yes" onclick="handleYes()">ACEITO</button>
+            <button id="no" onclick="handleNo()">SOU CHATA DMS</button>
+        </section>
+
+
+         <!-- Grade de Fotos -->
+         <section id="photo-gallery">
+            <h2>OUR PHOTOS</h2>
+            <div class="photo-grid">
+                <div class="photo">
+                    <img src="./foto1.jpg" alt="Foto 1">
+                </div>
+                <div class="photo">
+                    <img src="./foto2.jpg" alt="Foto 2">
+                </div>
+                <div class="photo">
+                    <img src="./foto4.jpg" alt="Foto 3">
+                </div>
+                <div class="photo">
+                    <img src="./foto5.jpg" alt="Foto 4">
+                </div>
+                <div class="photo">
+                    <img src="./foto6.jpg" alt="Foto 5">
+                </div>
+                <div class="photo">
+                    <img src="./foto7.jpg" alt="Foto 5">
+                </div>
+                <div class="photo">
+                    <img src="./foto8.jpg" alt="Foto 5">
+                </div>
+            </div>
+        </section>
+
+           <!-- Botão para Página Profissional de Médica -->
+        <section id="professional-page">
+            <a class="surpresa" href="medciner.html">Volte daqui algum tempo</a>
+        </section>
+
+    </main>
+
+
+    <script>
+        function handleYes() {
+            window.location.href = 'https://open.spotify.com/playlist/1dvhDCLcLQf31R1D1591Kg?si=2d72fa452b9d4af1';
+        }
+
+        function handleNo() {
+            const noButton = document.getElementById('no');
+            noButton.classList.add('moving');
+            noButton.style.top = `${Math.random() * 80 + 10}%`;
+            noButton.style.left = `${Math.random() * 80 + 10}%`;
+            setTimeout(() => {
+                noButton.classList.remove('moving');
+                noButton.style.top = '';
+                noButton.style.left = '';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* Fonte e cores */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #1d1d1d, #f28b82);
+    color: #f28b82;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #f28b82;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 40px;
+}
+
+#movie-list,
+#audio-list ul,
+#recommendations ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.movie, 
+#recommendations ul li {
+    background-color: #333;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover, 
+#recommendations ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.movie img, 
+#recommendations ul li img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-title, 
+#recommendations ul li p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #fff;
+}
+
+#message-to-liz h1, 
+#audio-list h2, 
+#recommendations h2,
+#pdf-list h2, 
+#photo-gallery h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #f28b82;
+    letter-spacing: 0.5px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#yes {
+    background-color: #f28b82;
+    color: #fff;
+}
+
+#no {
+    background-color: #3a3a3a;
+    color: #fff;
+    position: relative;
+}
+
+#no.moving {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #f28b82;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#pdf-list a {
+    text-decoration: none;
+    color: #f28b82;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#pdf-list a:hover {
+    color: #fff;
+}
+
+.surpresa {
+    color: #f28b82;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.surpresa:hover {
+    color: #fff;
+}
