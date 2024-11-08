@@ -26,5 +26,23 @@
     <footer>
         <p>&copy; 2024 Dra. Liz Patrici. Todos os direitos reservados.</p>
     </footer>
+
+        <script>
+        function handleYes() {
+            window.location.href = 'https://open.spotify.com/playlist/1dvhDCLcLQf31R1D1591Kg?si=2d72fa452b9d4af1';
+        }
+
+        function handleNo() {
+            const noButton = document.getElementById('no');
+            noButton.classList.add('moving');
+            noButton.style.top = `${Math.random() * 80 + 10}%`;
+            noButton.style.left = `${Math.random() * 80 + 10}%`;
+            setTimeout(() => {
+                noButton.classList.remove('moving');
+                noButton.style.top = '';
+                noButton.style.left = '';
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
